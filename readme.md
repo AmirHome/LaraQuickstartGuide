@@ -167,9 +167,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 	3,4.	
 	composer require intervention/image
     composer require intervention/imagecache
-		insert config/app.php in the $providers: 'Intervention\Image\ImageServiceProvider',
-		insert config/app.php in the alias: 'Image'     => 'Intervention\Image\Facades\Image',
-		php artisan vendor:publish
+		insert config/app.php in the $providers: Intervention\Image\ImageServiceProvider::class,
+		insert config/app.php in the alias: 'Image' => Intervention\Image\Facades\Image::class,
+		php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLaravel5"
 		note: the requested PHP extension fileinfo
 		*******Code*******
 		// for size image manegment
