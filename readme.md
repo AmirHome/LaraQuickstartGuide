@@ -14,11 +14,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Backup DataBase
 
-	mysqldump --opt -u root eat2donate > E:\xampp\htdocs\eat2donate-admin\database\eat2donate.dump
-	mysql -u root -p*SM4753hilti* eat2donate < /var/www/html/eat2donate-admin/database/eat2donate.dump
+	mysqldump --opt -u root dbname > E:\xampp\htdocs\projectname\database\dbname.dump
+	mysql -u root -p***** dbname < /var/www/html/projectname/database/dbname.dump
 
-    mysqldump --opt -uroot -p*SM4753hilti* eat2donate > /var/www/html/eat2donate-admin/database/eat2donate-21102016.dump
-	mysql -u root eat2donate < E:\xampp\htdocs\eat2donate-admin\database\eat2donate.dump
+    mysqldump --opt -uroot -p***** dbname > /var/www/html/projectname/database/dbname-21102016.dump
+	mysql -u root dbname < E:\xampp\htdocs\projectname\database\dbname.dump
 
 ## Clean && Cache
 
