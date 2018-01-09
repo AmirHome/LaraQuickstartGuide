@@ -239,6 +239,13 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 		    'secret' => 'DATABASE_SECRET',
 		    'storage_bucket' => 'STORAGE_BUCKET', // Only used for JS integration
 		]
+	10.
+    composer require tucker-eric/eloquentfilter
+		insert config/app.php in the $providers:EloquentFilter\ServiceProvider::class,
+		php artisan vendor:publish --provider="EloquentFilter\ServiceProvider"
+		...
+
+
 ## Note 
     Create Class ViewComposerServiceProvider in App\Providers\ViewComposerServiceProvider.php
 
