@@ -147,7 +147,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 	** composer require bestmomo/filemanager
         //info: https://github.com/bestmomo/filemanager
         insert config/app.php in the $providers: Bestmomo\Filemanager\FilemanagerServiceProvider::class,
-        php artisan vendor:publish
+        php artisan vendor:publish --provider="Bestmomo\Filemanager\FilemanagerServiceProvider"
         *****Code******
         USER model
 			public function accessMediasAll()
@@ -159,10 +159,18 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 			{
 			    // return true for access to one folder
 			}
+    	
+    	In blade:
 
-		public\ckeditor\config.js:     
-     	
-    		config.filebrowserBrowseUrl= 'http://localhost/cms/public/filemanager/index.html';		
+    	<script src="{!!url('/resources/vendors/ckeditor')!!}/ckeditor.js"></script>
+		<script>
+
+		    CKEDITOR.replace( 'ckeditorxxx', {
+		        language: '{{ App::getLocale() }}',
+		        filebrowserBrowseUrl: "{{url('/').'/public/filemanager/index.html'}}"
+		    });		
+		</script>
+		{!! Form::textarea('content', old('content',$page->content), ['class'=>'form-control', 'id'=>'ckeditorxxx']) !!}
 		***********
 	3,4.	
 	composer require intervention/image
