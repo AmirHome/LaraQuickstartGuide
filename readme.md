@@ -132,11 +132,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 		Find  "url('quickadmin/" where: \vendor Replace "url('resources/quickadmin/"
 		php artisan vendor:publish --force
 
-## install plugins
+## INSTALL PLUGINS
 	Note **: don't composer update
 	cd amir-project
 
-	1.
+# 1. quickadmin
 	** composer require laraveldaily/quickadmin
 		insert `Laraveldaily\Quickadmin\QuickadminServiceProvider::class,` to your `\config\app.php` providers.
 
