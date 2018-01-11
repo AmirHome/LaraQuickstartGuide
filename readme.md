@@ -136,14 +136,14 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 	Note **: don't composer update
 	cd amir-project
 
-# 1. quickadmin
+#### 1. quickadmin
 	** composer require laraveldaily/quickadmin
 		insert `Laraveldaily\Quickadmin\QuickadminServiceProvider::class,` to your `\config\app.php` providers.
 
 		php artisan quickadmin:install
 		insert App/Http/Kernel.php in the $routeMiddleware: 'role' => \Laraveldaily\Quickadmin\Middleware\HasPermissions::class,
 
-	2.
+#### 2. filemanager
 	**  composer require unisharp/laravel-filemanager:~1.8
         //info: https://github.com/bestmomo/filemanager
         insert config/app.php in the $providers: Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
