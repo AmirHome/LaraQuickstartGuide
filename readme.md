@@ -145,7 +145,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 #### 2. filemanager
 	**  composer require unisharp/laravel-filemanager:~1.8
-        //info: https://github.com/bestmomo/filemanager
+
         insert config/app.php in the $providers: Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
 
         set asset path vendor index.blade.php and LfmHelpers.php
@@ -169,7 +169,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 		</script>
 		{!! Form::textarea('content', old('content',$page->content), ['class'=>'form-control', 'id'=>'ckeditorxxx']) !!}
 		***********
-	3,4.	
+
+#### 3,4. Image/ImageCache
 	composer require intervention/image
     composer require intervention/imagecache
 		insert config/app.php in the $providers: Intervention\Image\ImageServiceProvider::class,
@@ -212,11 +213,13 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 		// for test <img src="{{ url('/photo/100x100/somephoto.jpg') }}">
 		**************
-	5.
+
+#### 5. unique validator
 	composer require felixkiss/uniquewith-validator:2.*
 		//info: https://github.com/felixkiss/uniquewith-validator
 		insert config/app.php in the $providers: 'Felixkiss\UniqueWithValidator\UniqueWithValidatorServiceProvider',
-	6.
+
+#### 6. recaptcha
     composer require greggilbert/recaptcha:dev-master
         //info: https://github.com/greggilbert/recaptcha
         insert config/app.php in the $providers: Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
@@ -224,17 +227,20 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         php artisan vendor:publish --provider="Greggilbert\Recaptcha\RecaptchaServiceProvider"
         /config/recaptcha.php, enter your reCAPTCHA public and private keys.
         resources/lang/[lang]/validation.php: "recaptcha" => 'The :attribute field is not correct.',
-	7.
+
+#### 7. debuger
 	composer require barryvdh/laravel-debugbar --dev
 		insert config/app.php in the $providers: Barryvdh\Debugbar\ServiceProvider::class,
 		insert config/app.php in the alias	   : 'Debugbar' => Barryvdh\Debugbar\Facade::class,
 		php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
-	8.
+
+#### 8. Collective
 	composer require laravelcollective/html:5.2.*
 		insert config/app.php in the $providers: Collective\Html\HtmlServiceProvider::class,
 		insert config/app.php in the alias	   : 'Form' => Collective\Html\FormFacade::class,
       											 'Html' => Collective\Html\HtmlFacade::class,
-    9.
+
+#### 9. firebase
     composer require mpociot/laravel-firebase-sync
 		This package requires you to add the following section to your config/services.php file:
 		'firebase' => [
@@ -244,7 +250,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 		    'secret' => 'DATABASE_SECRET',
 		    'storage_bucket' => 'STORAGE_BUCKET', // Only used for JS integration
 		]
-	10.
+
+#### 10. filter
     composer require tucker-eric/eloquentfilter
 		insert config/app.php in the $providers:EloquentFilter\ServiceProvider::class,
 		php artisan vendor:publish --provider="EloquentFilter\ServiceProvider"
