@@ -144,22 +144,16 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 		insert App/Http/Kernel.php in the $routeMiddleware: 'role' => \Laraveldaily\Quickadmin\Middleware\HasPermissions::class,
 
 	2.
-	** composer require bestmomo/filemanager
+	**  composer require unisharp/laravel-filemanager:~1.8
         //info: https://github.com/bestmomo/filemanager
-        insert config/app.php in the $providers: Bestmomo\Filemanager\FilemanagerServiceProvider::class,
-        php artisan vendor:publish --provider="Bestmomo\Filemanager\FilemanagerServiceProvider"
-        *****Code******
-        USER model
-			public function accessMediasAll()
-			{
-			    // return true for access to all medias
-			}
+        insert config/app.php in the $providers: Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
 
-			public function accessMediasFolder()
-			{
-			    // return true for access to one folder
-			}
-    	
+        set asset path vendor index.blade.php and LfmHelpers.php
+        php artisan vendor:publish --tag=lfm_config
+		php artisan vendor:publish --tag=lfm_public
+		php artisan route:clear
+		php artisan config:clear
+        *****Code******
     	In blade:
 
     	<script src="{!!url('/resources/vendors/ckeditor')!!}/ckeditor.js"></script>
@@ -167,8 +161,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 		    CKEDITOR.replace( 'ckeditorxxx', {
 		        language: '{{ App::getLocale() }}',
-		        filebrowserBrowseUrl: "{{url('/').'/public/filemanager/index.html'}}"
-		    });		
+		        filebrowserImageBrowseUrl: '{{url('/')}}/laravel-filemanager?type=Images',
+		        filebrowserImageUploadUrl: '{{url('/')}}/laravel-filemanager/upload?type=Images&_token={{csrf_token()}}',
+		        filebrowserBrowseUrl: '{{url('/')}}/laravel-filemanager?type=Files',
+		        filebrowserUploadUrl: '{{url('/')}}/laravel-filemanager/upload?type=Files&_token={{csrf_token()}}'
+		    });	
 		</script>
 		{!! Form::textarea('content', old('content',$page->content), ['class'=>'form-control', 'id'=>'ckeditorxxx']) !!}
 		***********
