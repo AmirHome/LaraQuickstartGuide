@@ -11,21 +11,7 @@
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
-
-## Backup DataBase
-
-	mysqldump --opt -u root dbname > E:\xampp\htdocs\projectname\database\dbname.dump
-	mysql -u root -p***** dbname < /var/www/html/projectname/database/dbname.dump
-
-    mysqldump --opt -uroot -p***** dbname > /var/www/html/projectname/database/dbname-21102016.dump
-	mysql -u root dbname < E:\xampp\htdocs\projectname\database\dbname.dump
-
-## Clean && Cache
-
-	php artisan cache:clear && php artisan cache:table && php artisan route:clear && php artisan route:cache && php artisan view:clear && php artisan config:clear && php artisan config:cache && php artisan debugbar:clear && php artisan clear-compiled && composer dump-autoload
-
-## Instaled Composers
-### Amir Composer
+## Installing Laravel
 
 	composer create-project --prefer-dist laravel/laravel amir-project
 
@@ -257,6 +243,15 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 		php artisan vendor:publish --provider="EloquentFilter\ServiceProvider"
 		...
 
+## Backup DataBase
+	mysqldump --opt -u root dbname > E:\xampp\htdocs\projectname\database\dbname.dump
+	mysql -u root -p***** dbname < /var/www/html/projectname/database/dbname.dump
+
+    mysqldump --opt -uroot -p***** dbname > /var/www/html/projectname/database/dbname-21102016.dump
+	mysql -u root dbname < E:\xampp\htdocs\projectname\database\dbname.dump
+
+## Clean && Cache
+	php artisan cache:clear && php artisan cache:table && php artisan route:clear && php artisan route:cache && php artisan view:clear && php artisan config:clear && php artisan config:cache && php artisan debugbar:clear && php artisan clear-compiled && composer dump-autoload
 
 ## Note 
     Create Class ViewComposerServiceProvider in App\Providers\ViewComposerServiceProvider.php
