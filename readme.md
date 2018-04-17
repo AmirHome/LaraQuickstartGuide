@@ -242,6 +242,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 		php artisan vendor:publish --provider="EloquentFilter\ServiceProvider"
 		...
 
+#### 11. seotools [Documentation](https://github.com/artesaos/seotools)
+    composer require artesaos/seotools
+		insert config/app.php in the $providers:Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+		php artisan vendor:publish --provider="Artesaos\SEOTools\Providers\SEOToolsServiceProvider"
+		...
+
 ## Backup DataBase
 	mysqldump --opt -u root dbname > E:\xampp\htdocs\projectname\database\dbname.dump
 	mysql -u root -p***** dbname < /var/www/html/projectname/database/dbname.dump
