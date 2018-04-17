@@ -200,8 +200,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 		// for test <img src="{{ url('/photo/100x100/somephoto.jpg') }}">
 		**************
 
-#### 5. unique validator
-		[Documentation](https://github.com/felixkiss/uniquewith-validator)
+#### 5. unique validator [Documentation](https://github.com/felixkiss/uniquewith-validator)
 	composer require felixkiss/uniquewith-validator
 		insert config/app.php in the $providers: Felixkiss\UniqueWithValidator\ServiceProvider::class,
 
