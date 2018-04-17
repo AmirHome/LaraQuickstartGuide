@@ -248,6 +248,14 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 		php artisan vendor:publish --provider="Artesaos\SEOTools\Providers\SEOToolsServiceProvider"
 		...
 
+#### 12. widgets [Documentation](https://github.com/arrilot/laravel-widgets)
+    composer require arrilot/laravel-widgets
+		insert config/app.php in the $providers:Arrilot\Widgets\ServiceProvider::class,
+		insert config/app.php in the $aliases:
+		    'Widget'       => Arrilot\Widgets\Facade::class,
+    		'AsyncWidget'  => Arrilot\Widgets\AsyncFacade::class,
+		...
+
 ## Backup DataBase
 	mysqldump --opt -u root dbname > E:\xampp\htdocs\projectname\database\dbname.dump
 	mysql -u root -p***** dbname < /var/www/html/projectname/database/dbname.dump
