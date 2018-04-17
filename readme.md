@@ -259,6 +259,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 #### 13. JavaScript [Documentation](https://github.com/laracasts/PHP-Vars-To-Js-Transformer)
     composer require laracasts/utilities
 		insert config/app.php in the $providers:'Laracasts\Utilities\JavaScript\JavaScriptServiceProvider'
+		php artisan vendor:publish --provider="Laracasts\Utilities\JavaScript\JavaScriptServiceProvider"
 		...
 
 ## Backup DataBase
