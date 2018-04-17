@@ -115,7 +115,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 		Reaname /server.php to index.php
 		Move public/.htaccess to /.htaccess
 		Move public/quickadmin to resources
-		Find  "url('quickadmin/" where: \vendor Replace "url('resources/quickadmin/"
+		Find  "url('quickadmin/" where: \vendor Replace "url('resources/vendors/quickadmin/"
 		php artisan vendor:publish --force
 
 ## INSTALL PLUGINS
