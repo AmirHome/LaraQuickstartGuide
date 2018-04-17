@@ -156,7 +156,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 		{!! Form::textarea('content', old('content',$page->content), ['class'=>'form-control', 'id'=>'ckeditorxxx']) !!}
 		***********
 
-#### 3,4. Image/ImageCache
+#### 3,4. Image/ImageCache [Documentation](http://image.intervention.io/)
 	composer require intervention/image
     composer require intervention/imagecache
 		insert config/app.php in the $providers: Intervention\Image\ImageServiceProvider::class,
