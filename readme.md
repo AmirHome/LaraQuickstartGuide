@@ -256,6 +256,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     		'AsyncWidget'  => Arrilot\Widgets\AsyncFacade::class,
 		...
 
+#### 13. JavaScript [Documentation](https://github.com/laracasts/PHP-Vars-To-Js-Transformer)
+    composer require laracasts/utilities
+		insert config/app.php in the $providers:'Laracasts\Utilities\JavaScript\JavaScriptServiceProvider'
+		...
+
 ## Backup DataBase
 	mysqldump --opt -u root dbname > E:\xampp\htdocs\projectname\database\dbname.dump
 	mysql -u root -p***** dbname < /var/www/html/projectname/database/dbname.dump
