@@ -250,7 +250,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 	mysql -u root dbname < E:\xampp\htdocs\projectname\database\dbname.dump
 
 ## Clean && Cache
-	php artisan cache:clear && php artisan cache:table && php artisan route:clear && php artisan route:cache && php artisan view:clear && php artisan config:clear && php artisan config:cache && php artisan debugbar:clear && php artisan clear-compiled && composer dump-autoload
+	php artisan cache:clear && php artisan route:clear && php artisan view:clear && php artisan config:clear
+	php artisan debugbar:clear && php artisan clear-compiled && composer dump-autoload
 
 ## Note 
     Create Class ViewComposerServiceProvider in App\Providers\ViewComposerServiceProvider.php
