@@ -201,9 +201,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 		**************
 
 #### 5. unique validator
-	composer require felixkiss/uniquewith-validator:2.*
-		//info: https://github.com/felixkiss/uniquewith-validator
-		insert config/app.php in the $providers: 'Felixkiss\UniqueWithValidator\UniqueWithValidatorServiceProvider',
+		[Documentation](https://github.com/felixkiss/uniquewith-validator)
+	composer require felixkiss/uniquewith-validator
+		insert config/app.php in the $providers: Felixkiss\UniqueWithValidator\ServiceProvider::class,
 
 #### 6. recaptcha
     composer require greggilbert/recaptcha:dev-master
