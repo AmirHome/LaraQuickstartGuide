@@ -213,7 +213,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         /config/recaptcha.php, enter your reCAPTCHA public and private keys.
         resources/lang/[lang]/validation.php: "recaptcha" => 'The :attribute field is not correct.',
 
-#### 7. debuger
+#### 7. debuger [Documentation](https://github.com/barryvdh/laravel-debugbar)
 	composer require barryvdh/laravel-debugbar --dev
 		insert config/app.php in the $providers: Barryvdh\Debugbar\ServiceProvider::class,
 		insert config/app.php in the alias	   : 'Debugbar' => Barryvdh\Debugbar\Facade::class,
