@@ -303,5 +303,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## Git Commands
 	$ git init
 	$ git add -A && git commit -m "Init"
-	$ git pull origin master && git remote | xargs -L1 git push --all
+	$ git pull origin master && git remote | grep -v 'upstream' | xargs -L1 git push --all
 
