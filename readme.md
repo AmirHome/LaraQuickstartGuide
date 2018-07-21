@@ -305,3 +305,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 	$ git add -A && git commit -m "Init"
 	$ git pull origin master && git remote | grep -v 'upstream' | xargs -L1 git push --all
 
+## Regular Expersion
+	old\('(.*)',.*\),
+	old('\1',isset($flat->\1)?$flat->\1:null),
